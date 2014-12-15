@@ -1,0 +1,35 @@
+<table>
+	<thead>
+		<tr>
+			<th>Image</th>
+			<th>Brand</th>
+			<th>Shoe Name</th>
+			<th>Sport</th>
+			<th>Size</th>
+			<th>Colorway</th>
+			<th>Price</th>
+			<th>Date Released</th>
+			<th>Date Acquired</th>
+	</thead>
+	<tbody>
+		<tr ng-repeat="(shoeId, shoe) in shoelist.shoes">
+			<td>{{shoe.image}}</td>
+			<td>{{shoe.brand}}</td>
+			<td>{{shoe.name}}</td>
+			<td>{{shoe.sport}}</td>
+			<td>{{shoe.size}}</td>
+			<td>{{shoe.colorway}}</td>
+			<td>{{shoe.price}}</td>
+			<td>{{shoe.released}}</td>
+			<td>{{shoe.acquired}}</td>
+			<td>
+				<a class="btn btn-info" href="/#/{{shoeId}}">Show</a>
+				<a class="btn btn-info" href="/#/{{shoeId}}/edit">Edit</a>
+				<button ng-click="shoelist.removeShoe(shoeId)">Delete</button>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
