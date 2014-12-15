@@ -1,0 +1,35 @@
+[
+	{
+		"image": "http://a.abcnews.com/images/Entertainment/ht_air_jordan_1_nt_111223_ssh.jpg", 
+		"brand": "Nike",
+		"style name": "Air Jordan I",
+		"sport": "basketball",
+		"size": "11",
+		"colorway": "black, red, white",
+		"price": "$100.00",
+		"year released": "1984",
+		"date acquired": "Jan 3, 2014"
+	},
+	{
+		"image": "http://6.kicksonfire.net/wp-content/uploads/2012/09/Nike-Air-Penny-V-5-%E2%80%98Orlando%E2%80%99-at-Concepts-1.jpg",
+		"brand": "Nike",
+		"style name": "Air Penny V 'Orlando'",
+		"sport": "basketball",
+		"size": "10",
+		"colorway": "black, blue, white",
+		"price": "144",
+		"year released": "2012",
+		"date acquired": "Feb 14, 2012"
+	},
+	{
+		"image": "http://images.freshnessmag.com/wp-content/uploads/2014/09/Nike-Air-Max-Bo-Jax-00.jpg",
+		"brand": "Nike",
+		"name": "Air Max Bo Jax",
+		"sport": "Crosstraining",
+		"size": "11",
+		"colorway": "white, volt, light magnet grey, black",
+		"price": "159.99",
+		"year released": "1992",
+		"date acquired": "Nov 14, 2014"
+	}
+]
