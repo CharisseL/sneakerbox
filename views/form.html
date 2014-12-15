@@ -1,0 +1,38 @@
+<form name=snkrForm" ng-submit="snkrForm.$valid && shoelist.addNewShoe()" novalidate>
+	<div class="form-group" ng-class="{'has-error': !shoelist.newShoe.brand}">
+		<label class="control-label">Brand</label>
+			<input class="form-control" type="text" ng-model=shoelist.newShoe.brand" required>
+	</div>
+	<div class="form-group" ng-class="{'has-error': !shoelist.newShoe.name}">
+		<label class="control-label">Design/Collection Name</label>
+			<input class="form-control" type="text" ng-model=shoelist.newShoe.name" required>
+	</div>
+	<div class="form-group" ng-class="{'has-error': !shoelist.newShoe.sport}">
+		<label class="control-label">Sport</label>
+			<select ng-model="shoelist.newShoe.sport">
+				<option value="{{val}}" ng-repeat="(val, text) in shoelist.sport">
+					{{text}}
+				</option>
+			</select>
+	</div>
+	<div class="form-group" ng-class="{'has-error': !shoelist.newShoe.size}">
+		<label class="control-label">Size</label>
+			<input class="form-control" type="text" ng-model=shoelist.newShoe.size" required>
+	</div>
+	<div class="form-group" ng-class="{'has-error': !shoelist.newShoe.colorway}">
+		<label class="control-label">Colorway</label>
+			<input class="form-control" type="text" ng-model=shoelist.newShoe.colorway">
+	</div>
+	<div class="form-group" ng-class="{'has-error': !shoelist.newShoe.price}">
+		<label class="control-label">Price</label>
+			<input class="form-control" type="text" ng-model=shoelist.newShoe.price">
+	</div>
+	<div class="form-group" ng-class="{'has-error': !shoelist.newShoe.released}">
+		<label class="control-label">Date Released</label>
+			<input class="form-control" type="text" ng-model=shoelist.newShoe.released">
+	</div>
+	<div class="form-group" ng-class="{'has-error': !shoelist.newShoe.acquired}">
+		<label class="control-label">Date Acquired</label>
+			<input class="form-control" type="text" ng-model=shoelist.newShoe.acquired">
+	</div>
+		<input type="submit" value="Add to My Sneaker Box" class="btn" ng-class={disabled: snkrForm.$invalid}">
