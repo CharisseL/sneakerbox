@@ -1,18 +1,18 @@
 ;(function(){
 	'use strict';
 
-	angular.module('snkrApp')
+	angular.module('snkrApp', ['ngRoute', 'mgcrea.ngStrap'])
 		.config(function($routeProvider){
 			$routeProvider
 			.when('/', {
-				templateUrl: 'views/shoelist.html',
+				templateUrl: 'views/table.html',
 				controller: 'ShoeController',
-				controllerAs: 'shoelist'
+				controllerAs: 'shoeCtrl'
 			})
 			.when('/new', {
 				templateUrl: 'views/form.html',
 				controller: 'ShoeController',
-				controllerAs: 'shoelist'
+				controllerAs: 'shoeCtrl'
 			})
 			.when('/:id', {
 				templateUrl: 'views/show.html',

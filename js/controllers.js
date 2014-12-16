@@ -24,7 +24,7 @@
 			vm.sportOptions = sneakerFactory.sportOptions;
 
 		})
-		.controller('ShoeController', function($http, sneakerFactory{
+		.controller('ShoeController', function($http, sneakerFactory){
 			var vm = this;
 
 			sneakerFactory.getAllShoes(function(data){
@@ -34,7 +34,7 @@
 			vm.addNewShoe = function(){
 				sneakerFactory.createShoe(vm.newShoe, function(data){
 					vm.shoes[data.name] = vm.newShoe;
-					vm.newShow = _freshShoe();
+					vm.newShoe = _freshShoe();
 				});
 			};
 
