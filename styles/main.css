@@ -1,16 +1,22 @@
 #container{
-background-image: url("http://cdn.sneakernews.com/wp-content/uploads/2011/12/2011-top-30-sneakers-summary.jpg");
-height: 200px;
-background-repeat: no-repeat;
+	background-image: url("http://cdn.sneakernews.com/wp-content/uploads/2011/12/2011-top-30-sneakers-summary.jpg");
+	height: 200px;
+ -webkit-filter: invert(.8);
+  filter: invert(.8);
+	background-repeat: no-repeat;
   background-size: cover;
 }
 
-h1{
-	color: white;
+#navbar {
+	background-color: lightgrey;
 }
+h1{
+	color: #7e2b86;
+	font-family: 'Sonsie One', cursive;
+}
+
 th{
-	background-color: black;
-	color: white;
+	color: slategrey;
 	padding-top: 2px;
 	padding-bottom: 2px;
 	text-align: center;
