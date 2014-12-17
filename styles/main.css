@@ -1,6 +1,10 @@
+body {
+	background-image: url('/images/grey_wash_wall.png');
+}
+
 #container{
 	background-image: url("http://cdn.sneakernews.com/wp-content/uploads/2011/12/2011-top-30-sneakers-summary.jpg");
-	height: 200px;
+	height: 170px;
  -webkit-filter: invert(.8);
   filter: invert(.8);
 	background-repeat: no-repeat;
@@ -8,15 +12,16 @@
 }
 
 #navbar {
-	background-color: lightgrey;
+	margin-left: 25px;
 }
+
 h1{
-	color: #7e2b86;
+	color: white;
 	font-family: 'Sonsie One', cursive;
 }
 
 th{
-	color: slategrey;
+	color: #48b3d8;
 	padding-top: 2px;
 	padding-bottom: 2px;
 	text-align: center;
@@ -32,4 +37,10 @@ td {
 .showKicks {
 	max-width: 200px;
 	max-height: 200px;
+}
+
+.show-page-image {
+	max-width: 300px;
+	max-height: 300px;
+
 }

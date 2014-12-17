@@ -14,6 +14,11 @@
 				controller: 'ShoeController',
 				controllerAs: 'shoeCtrl'
 			})
+			.when('/collection', {
+				templateUrl: 'views/table.html',
+				controller: 'ShoeController',
+				controllerAs: 'shoeCtrl'
+			})
 			.when('/:id', {
 				templateUrl: 'views/show.html',
 				controller: 'ShowController',
