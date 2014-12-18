@@ -21,7 +21,6 @@
 				sneakerFactory.createShoe(id, vm.newShoe);
 			};
 
-			vm.sportOptions = sneakerFactory.sportOptions;
 
 		})
 		.controller('ShoeController', function($http, sneakerFactory){

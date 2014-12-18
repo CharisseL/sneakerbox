@@ -1,23 +1,19 @@
 <form name="snkrForm" ng-submit="snkrForm.$valid && shoeCtrl.addNewShoe()" novalidate>
-	<div class="form-group" ng-class="{'has-error': !shoeCtrl.newShoe.brand}">
-		<label class="control-label">Brand</label>
-			<input class="form-control" type="text" ng-model="shoeCtrl.newShoe.brand">
+	<div class="form-group" ng-class="{'has-error': !shoeCtrl.newShoe.image}">
+		<label class="control-label">Image</label>
+			<input class="form-control" type="text" ng-model="shoeCtrl.newShoe.image">
 	</div>
 	<div class="form-group" ng-class="{'has-error': !shoeCtrl.newShoe.brand}">
 		<label class="control-label">Brand</label>
 			<input class="form-control" type="text" ng-model="shoeCtrl.newShoe.brand" required>
 	</div>
 	<div class="form-group" ng-class="{'has-error': !shoeCtrl.newShoe.name}">
-		<label class="control-label">Style Name</label>
+		<label class="control-label">Shoe Name</label>
 			<input class="form-control" type="text" ng-model="shoeCtrl.newShoe.name" placeholder="Air Jordan, Foamposites, etc..">
 	</div>
-	<div class="form-group" ng-class="{'has-error': !shoeCtrl.newShoe.sportOptions}">
+	<div class="form-group" ng-class="{'has-error': !shoeCtrl.newShoe.sport}">
 		<label class="control-label">Sport</label>
-			<select ng-model="shoeCtrl.newShoe.sportOptions">
-				<option value="{{val}}" ng-repeat="(val, text) in shoeCtrl.sportOptions">
-					{{text}}
-				</option>
-			</select>
+			<input class="form-control" type="text" ng-model="shoeCtrl.newShoe.sport">
 	</div>
 	<div class="form-group" ng-class="{'has-error': !shoeCtrl.newShoe.size}">
 		<label class="control-label">Size</label>

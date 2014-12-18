@@ -27,7 +27,7 @@
 			.when('/:id/edit', {
 				templateUrl: 'views/form.html',
 				controller: 'EditController',
-				controllerAs: 'edit'
+				controllerAs: 'shoeCtrl'
 			})
 			.otherwise({redirectTo: '/'});
 		})
