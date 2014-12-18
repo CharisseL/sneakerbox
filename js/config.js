@@ -5,7 +5,7 @@
 		.config(function($routeProvider){
 			$routeProvider
 			.when('/', {
-				templateUrl: 'views/table.html',
+				templateUrl: 'views/snkrland.html',
 				controller: 'ShoeController',
 				controllerAs: 'shoeCtrl'
 			})

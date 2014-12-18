@@ -8,7 +8,6 @@
 			<th>Size</th>
 			<th>Colorway</th>
 			<th>Price</th>
-			<th>Year Released</th>
 			<th>Date Acquired</th>
 	</thead>
 	<tbody>
@@ -20,12 +19,12 @@
 			<td>{{shoe.size}}</td>
 			<td>{{shoe.colorway}}</td>
 			<td>{{shoe.price}}</td>
-			<td>{{shoe.released}}</td>
+			<!--<td>{{shoe.released}}</td>--!>
 			<td>{{shoe.acquired}}</td>
 			<td>
 				<a class="btn btn-info" href="/#/{{shoeId}}">Show</a>
 				<a class="btn btn-info" href="/#/{{shoeId}}/edit">Edit</a>
-				<button ng-click="shoelist.removeShoe(shoeId)">Delete</button>
+				<button ng-click="shoeCtrl.removeShoe(shoeId)">Delete</button>
 			</td>
 		</tr>
 	</tbody>
