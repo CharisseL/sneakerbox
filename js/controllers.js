@@ -18,7 +18,7 @@
 			});
 
 			vm.addNewShoe = function(){
-				sneakerFactory.editShoe(id, vm.newShoe);
+				sneakerFactory.createShoe(id, vm.newShoe);
 			};
 
 			vm.sportOptions = sneakerFactory.sportOptions;
@@ -33,6 +33,7 @@
 
 			vm.addNewShoe = function(){
 				sneakerFactory.createShoe(vm.newShoe, function(data){
+					vm.shoes = vm.shoes || {};
 					vm.shoes[data.name] = vm.newShoe;
 					vm.newShoe = _freshShoe();
 				});

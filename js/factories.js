@@ -16,9 +16,9 @@
 				});
 			}
 
-			function editShoe(id, shoelist){
+			function editShoe(id, shoeCtrl){
 				var url = 'https://sneakerbox.firebaseio.com/' + id + '.json';
-				$http.put(url, shoelist)
+				$http.put(url, shoeCtrl)
 					.success(function(data){
 						$location.path('/');
 					})

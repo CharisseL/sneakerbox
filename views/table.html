@@ -18,8 +18,7 @@
 			<td>{{shoe.sport}}</td>
 			<td>{{shoe.size}}</td>
 			<td>{{shoe.colorway}}</td>
-			<td>{{shoe.price}}</td>
-			<!--<td>{{shoe.released}}</td>--!>
+			<td><span id="currency-default">{{amount | currency}}</span>{{shoe.price}}</td>
 			<td>{{shoe.acquired}}</td>
 			<td>
 				<a class="btn btn-info" href="/#/{{shoeId}}">Show</a>

@@ -21,6 +21,10 @@ h1{
 	-webkit-text-stroke: 1px #802887;
 }
 
+a:link{
+	text-decoration: none;
+}
+
 th{
 	color: slategrey;
 	padding-top: 2px;

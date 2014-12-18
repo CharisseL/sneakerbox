@@ -1,11 +1,15 @@
 <form name="snkrForm" ng-submit="snkrForm.$valid && shoeCtrl.addNewShoe()" novalidate>
 	<div class="form-group" ng-class="{'has-error': !shoeCtrl.newShoe.brand}">
 		<label class="control-label">Brand</label>
-			<input class="form-control" type="text" ng-model=shoeCtrl.newShoe.brand" required>
+			<input class="form-control" type="text" ng-model="shoeCtrl.newShoe.brand">
+	</div>
+	<div class="form-group" ng-class="{'has-error': !shoeCtrl.newShoe.brand}">
+		<label class="control-label">Brand</label>
+			<input class="form-control" type="text" ng-model="shoeCtrl.newShoe.brand" required>
 	</div>
 	<div class="form-group" ng-class="{'has-error': !shoeCtrl.newShoe.name}">
 		<label class="control-label">Style Name</label>
-			<input class="form-control" type="text" ng-model="shoeCtrl.newShoe.name" placeholder="Air Jordan, Foamposites, etc.." required>
+			<input class="form-control" type="text" ng-model="shoeCtrl.newShoe.name" placeholder="Air Jordan, Foamposites, etc..">
 	</div>
 	<div class="form-group" ng-class="{'has-error': !shoeCtrl.newShoe.sportOptions}">
 		<label class="control-label">Sport</label>
@@ -17,22 +21,23 @@
 	</div>
 	<div class="form-group" ng-class="{'has-error': !shoeCtrl.newShoe.size}">
 		<label class="control-label">Size</label>
-			<input class="form-control" type="text" ng-model=shoeCtrl.newShoe.size" required>
+			<input class="form-control" type="text" ng-model="shoeCtrl.newShoe.size">
 	</div>
 	<div class="form-group" ng-class="{'has-error': !shoeCtrl.newShoe.colorway}">
 		<label class="control-label">Colorway</label>
-			<input class="form-control" type="text" ng-model=shoeCtrl.newShoe.colorway">
+			<input class="form-control" type="text" ng-model="shoeCtrl.newShoe.colorway">
 	</div>
 	<div class="form-group" ng-class="{'has-error': !shoeCtrl.newShoe.price}">
 		<label class="control-label">Price</label>
-			<input class="form-control" type="text" ng-model=shoeCtrl.newShoe.price">
+			<input class="form-control" type="text" ng-model="shoeCtrl.newShoe.price">
 	</div>
 	<div class="form-group" ng-class="{'has-error': !shoeCtrl.newShoe.released}">
 		<label class="control-label">Date Released</label>
-			<input class="form-control" type="text" ng-model=shoeCtrl.newShoe.released">
+			<input class="form-control" type="text" ng-model="shoeCtrl.newShoe.released">
 	</div>
 	<div class="form-group" ng-class="{'has-error': !shoeCtrl.newShoe.acquired}">
 		<label class="control-label">Date Acquired</label>
-			<input class="form-control" type="text" ng-model=shoeCtrl.newShoe.acquired">
+			<input class="form-control" type="text" ng-model="shoeCtrl.newShoe.acquired">
 	</div>
 		<input type="submit" value="Add to My Sneaker Box" class="btn btn-primary" ng-disabled="snkrForm.$invalid">
+</form>
