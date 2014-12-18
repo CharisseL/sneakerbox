@@ -57,20 +57,13 @@
 							console.log(err);
 						});
 			}
-
-			var sportOptions = {
-				high: 'Basketball',
-				medium: 'Crosstrainer',
-				small : 'Running'
-			};
-
+			
 			return {
 				getShoe: getShoe,
 				editShoe: editShoe,
 				createShoe: createShoe,
 				deleteShoe: deleteShoe,
 				getAllShoes: getAllShoes,
-				sportOptions: sportOptions
 			};
 		})
 	}());

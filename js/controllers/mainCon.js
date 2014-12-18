@@ -43,17 +43,15 @@
 					delete vm.shoes[shoeId];
 				});
 			};
+		})
+		.controller('PostsCtrl', function ($http){
+			$http.posts = [];
+			$http.post = {url: 'http://', title: ''};
 
-			vm.newShoe = _freshShoe();
-
-			vm.sportOptions = sneakerFactory.sportOptions;
-
-			function _freshShoe(){
-				return{
-					sport: 'basketball'
-				};
-			}
-
+			$http.submitPost = function (){
+				$http.posts.push($http.post);
+				$http.post = {url: 'http://', title: ''};
+			};
 		});
 
 	}());
