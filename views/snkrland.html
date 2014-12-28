@@ -1,6 +1,5 @@
 <h2>Welcome to SneakerBox</h2>
-<div ng-repeat="post in posts">
-	<a ng-href="{{post.url}}">{{post.title}}</a>
+<a ng-href="{{post.url}}">{{post.title}}</a>
 	
 <h3>What's happening today in Snkrland?</h3>
 
@@ -9,6 +8,8 @@
   <input type="text" ng-model="post.url" />
   <input type="submit" value="Add Post" />
 </form>
-Posts: {{posts}}<br />
-Post: {{post}}
+<div ng-repeat="post in posts"> 
+	{{posts}}
+	{{post}}
+</div>
 

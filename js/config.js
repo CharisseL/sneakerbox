@@ -15,8 +15,8 @@
 			$routeProvider
 			.when('/', {
 				templateUrl: 'views/snkrland.html',
-				controller: 'PostsController',
-				controllerAs: 'postsCtrl'
+				controller: 'PostController',
+				controllerAs: 'postCtrl'
 			})
 			.when('/new', {
 				templateUrl: 'views/form.html',

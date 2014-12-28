@@ -23,7 +23,7 @@
 
 
 		})
-		.controller('ShoeController', function($http, sneakerFactory){
+		.controller('ShoeController', function($scope, sneakerFactory){
 			var vm = this;
 
 			sneakerFactory.getAllShoes(function(data){
@@ -44,13 +44,16 @@
 				});
 			};
 		})
-		.controller('PostsCtrl', function ($http){
-			$http.posts = [];
-			$http.post = {url: 'http://', title: ''};
+		.controller('PostController', function ($scope) {
+			$scope.posts = [];
+			$scope.post = {title: '', url: 'http://'};
 
-			$http.submitPost = function (){
-				$http.posts.push($http.post);
-				$http.post = {url: 'http://', title: ''};
+			$scope.submitPost = function (){
+				$scope.posts.push($scope.post);
+				$scope.post = {url: 'http://', title: ''};
+			};
+			$scope.deletePost = function(index) {
+				$scope.posts.splice(index, 1);
 			};
 		});
 
