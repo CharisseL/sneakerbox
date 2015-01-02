@@ -10,7 +10,7 @@
   <input type="text" ng-model="post.url" />
   <input type="submit" value="Add Post" />
 </form>
-<div ng-repeat="post in posts"> 
+<div ng-repeat="(postId, post) in posts"> 
 </div>
 </br>
 <a class="twitter-timeline" href="https://twitter.com/SoleCollector" data-widget-id="551095524682903554">Tweets by @SoleCollector</a>
