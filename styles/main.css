@@ -1,14 +1,14 @@
 body {
 	background-image: url('/images/white_carbonfiber.png');
 }
-
 #container{
 	background-image: url("http://cdn.sneakernews.com/wp-content/uploads/2011/12/2011-top-30-sneakers-summary.jpg");
-	height: 175px;
+	height: 150px;
  -webkit-filter: invert(.8);
   filter: invert(.8);
 	background-repeat: no-repeat;
   background-size: cover;
+	opacity: .5;
 }
 
 #navbar {
@@ -16,9 +16,13 @@ body {
 }
 
 h1{
-	color: white;
-	font-family: 'Sonsie One', cursive;
-	-webkit-text-stroke: 1px #802887;
+	color: #14648f;
+	font-family: 'Faster One', cursive;
+	font-size: 55px;
+}
+
+h2, h3{
+	font-family: 'Teko', sans-serif;
 }
 
 a:link{
@@ -38,6 +42,9 @@ td {
 	
 }
 
+.snkrTop, .snkrPosts, .snkrNews, .snkrTweets {
+	margin-left:25px;
+}
 
 .showKicks {
 	max-width: 200px;

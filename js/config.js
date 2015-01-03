@@ -9,7 +9,8 @@
 			'ngResource',
 			'ngRoute',
 			'ngSanitize',
-			'ngTouch'
+			'ngTouch',
+			'firebase'
 	])
 		.config(function($routeProvider){
 			$routeProvider
@@ -37,6 +38,11 @@
 				templateUrl: 'views/form.html',
 				controller: 'EditController',
 				controllerAs: 'shoeCtrl'
+			})
+			.when('/register', {
+				templateUrl: 'views/register.html',
+				controller: 'AuthController',
+				controllerAs: 'authCtrl',
 			})
 			.otherwise({redirectTo: '/'});
 		})

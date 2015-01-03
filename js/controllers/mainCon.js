@@ -57,6 +57,17 @@
 				$scope.posts.splice(index, 1);
 			};
 			
+		})
+		.controller('AuthController', function($scope, $location, Auth, user) {
+			if (user){
+				$location.path('/register');
+			}
+			$scope.register = function () {
+				Auth.register($scope.user).then(function() {
+					return Auth.login($scope.user).then(function() {
+						$location.path('/register');
+					});
+				});
+			};
 		});
-
 	}());
