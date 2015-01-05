@@ -42,7 +42,7 @@
 			.when('/register', {
 				templateUrl: 'views/register.html',
 				controller: 'AuthController',
-				controllerAs: 'authCtrl',
+				controllerAs: 'authCtrl'
 			})
 			.otherwise({redirectTo: '/'});
 		})

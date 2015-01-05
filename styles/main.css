@@ -33,16 +33,16 @@ a:link{
 
 
 th{
-	color: darkgrey;
+	color: #14648f;
+	font-family: 'Teko', sans-serif;
 	padding-top: 2px;
 	padding-bottom: 2px;
 	text-align: center;
-	font-size: 16px;
+	font-size: 20px;
 }
 
 td {
 	text-align: center;
-	
 }
 
 .snkrTop, .snkrPosts, .snkrNews, .snkrTweets {
@@ -81,3 +81,17 @@ td {
 .form-control {
 	width: 450px;
 }
+
+#snkrBox img {
+    height: 100px;
+    width: 100px;
+    margin: 2px;
+}
+
+#snkrBox {
+    padding: 5px;
+		border: 5px solid lightgrey;
+    max-height: 200px;
+    width: 800px;
+}
+

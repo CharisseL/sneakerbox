@@ -28,7 +28,8 @@
 
 			sneakerFactory.getAllShoes(function(data){
 				vm.shoes = data;
-			});
+		  });
+
 
 			vm.addNewShoe = function(){
 				sneakerFactory.createShoe(vm.newShoe, function(data){
@@ -43,6 +44,16 @@
 					delete vm.shoes[shoeId];
 				});
 			};
+			$scope.$on('$viewContentLoaded', function(){
+				console.log('visible?');
+				$( "#shoelist" ).sortable();
+   		/*	$( ".snkrBox" ).dis({
+      		drop: function( event, ui ) {
+        	$( this )
+      	}
+    	});*/
+
+			});
 		})
 		.controller('PostController', function ($scope) {
 			$scope.posts = [];
@@ -59,15 +70,15 @@
 			
 		})
 		.controller('AuthController', function($scope, $location, Auth, user) {
-			if (user){
-				$location.path('/register');
+		/*	if (user){
+				$location.path('/');
 			}
 			$scope.register = function () {
 				Auth.register($scope.user).then(function() {
 					return Auth.login($scope.user).then(function() {
-						$location.path('/register');
+						$location.path('/');
 					});
 				});
-			};
+			};*/
 		});
 	}());

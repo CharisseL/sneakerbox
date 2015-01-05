@@ -1,3 +1,6 @@
+<div id="snkrBox">
+	<h3>This Week</h3>
+</div>
 <table class="table table-hover">
 	<thead>
 		<tr>
@@ -10,15 +13,15 @@
 			<th>Price</th>
 			<th>Date Acquired</th>
 	</thead>
-	<tbody>
+	<tbody id="shoelist">
 		<tr ng-repeat="(shoeId, shoe) in shoeCtrl.shoes">
-			<td><img class="showKicks" ng-src="{{shoe.image}}"></td>
+			<td><img class="showKicks image ui-widget-content" ng-src="{{shoe.image}}"></td>
 			<td>{{shoe.brand}}</td>
 			<td>{{shoe.name}}</td>
 			<td>{{shoe.sport}}</td>
 			<td>{{shoe.size}}</td>
 			<td>{{shoe.colorway}}</td>
-			<td><span id="currency-default">{{shoe.price | currency}}</span></td>
+			<td><span class="currency-default">{{shoe.price | currency}}</span></td>
 			<td>{{shoe.acquired}}</td>
 			<td>
 				<a class="btn btn-info" href="/#/{{shoeId}}">Show</a>
@@ -28,6 +31,4 @@
 		</tr>
 	</tbody>
 </table>
-
-
 
