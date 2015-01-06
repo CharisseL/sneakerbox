@@ -29,6 +29,11 @@
 				controller: 'ShoeController',
 				controllerAs: 'shoeCtrl'
 			})
+			.when('/register', {
+				templateUrl: 'views/register.html',
+				controller: 'AuthController',
+				controllerAs: 'authCtrl'
+			})
 			.when('/:id', {
 				templateUrl: 'views/show.html',
 				controller: 'ShowController',
@@ -38,11 +43,6 @@
 				templateUrl: 'views/form.html',
 				controller: 'EditController',
 				controllerAs: 'shoeCtrl'
-			})
-			.when('/register', {
-				templateUrl: 'views/register.html',
-				controller: 'AuthController',
-				controllerAs: 'authCtrl'
 			})
 			.otherwise({redirectTo: '/'});
 		})

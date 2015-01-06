@@ -23,7 +23,7 @@
 
 
 		})
-		.controller('ShoeController', function($scope, sneakerFactory){
+		.controller('ShoeController', function($scope, $filter, sneakerFactory){
 			var vm = this;
 
 			sneakerFactory.getAllShoes(function(data){
@@ -44,8 +44,18 @@
 					delete vm.shoes[shoeId];
 				});
 			};
+		/*	$scope().$on('$viewContentLoaded', function() {
+   			$( "#kicks" ).draggable();
+   			$( "#snkrBox" ).droppable({
+     		 drop: function( event, ui ) {
+      	  $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "#snkrBox" )
+            .html( "Dropped!" );
+      			}
+    			});
+  		});*/
 			$scope.$on('$viewContentLoaded', function(){
-				console.log('visible?');
 				$( "#shoelist" ).sortable();
    		/*	$( ".snkrBox" ).dis({
       		drop: function( event, ui ) {
@@ -54,7 +64,9 @@
     	});*/
 
 			});
+			$scope.shoes =[];
 		})
+
 		.controller('PostController', function ($scope) {
 			$scope.posts = [];
 			$scope.post = {title: '', url: 'http://'};

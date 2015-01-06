@@ -45,13 +45,12 @@ td {
 	text-align: center;
 }
 
-.snkrTop, .snkrPosts, .snkrNews, .snkrTweets {
-	margin-left:25px;
+.snkrTop, .snkrPosts, .snkrNews, .snkrTweets{
+	margin-left: 25px;
 }
 
-.snkrWeek{
-	margin-left: 600px;
-
+.snkrWeek {
+	margin-left: 650px;
 }
 
 .showKicks {
@@ -89,9 +88,9 @@ td {
 }
 
 #snkrBox {
+		margin-left: 20px;
     padding: 5px;
-		border: 5px solid lightgrey;
+		border: 2px solid slategrey;
     max-height: 200px;
-    width: 800px;
+    width: 900px;
 }
-

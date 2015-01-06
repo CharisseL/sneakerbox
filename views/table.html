@@ -1,4 +1,4 @@
-<div id="snkrBox">
+<div id="snkrBox" class="snkrDrop">
 	<h3>This Week</h3>
 </div>
 <table class="table table-hover">
@@ -8,18 +8,16 @@
 			<th>Brand</th>
 			<th>Shoe Name</th>
 			<th>Sport</th>
-			<th>Size</th>
 			<th>Colorway</th>
 			<th>Price</th>
 			<th>Date Acquired</th>
 	</thead>
 	<tbody id="shoelist">
 		<tr ng-repeat="(shoeId, shoe) in shoeCtrl.shoes">
-			<td><img class="showKicks image ui-widget-content" ng-src="{{shoe.image}}"></td>
+			<td><img class="showKicks image" ng-src="{{shoe.image}}"></td>
 			<td>{{shoe.brand}}</td>
 			<td>{{shoe.name}}</td>
 			<td>{{shoe.sport}}</td>
-			<td>{{shoe.size}}</td>
 			<td>{{shoe.colorway}}</td>
 			<td><span class="currency-default">{{shoe.price | currency}}</span></td>
 			<td>{{shoe.acquired}}</td>
