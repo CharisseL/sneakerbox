@@ -44,24 +44,9 @@
 					delete vm.shoes[shoeId];
 				});
 			};
-		/*	$scope().$on('$viewContentLoaded', function() {
-   			$( "#kicks" ).draggable();
-   			$( "#snkrBox" ).droppable({
-     		 drop: function( event, ui ) {
-      	  $( this )
-          .addClass( "ui-state-highlight" )
-          .find( "#snkrBox" )
-            .html( "Dropped!" );
-      			}
-    			});
-  		});*/
 			$scope.$on('$viewContentLoaded', function(){
 				$( "#shoelist" ).sortable();
-   		/*	$( ".snkrBox" ).dis({
-      		drop: function( event, ui ) {
-        	$( this )
-      	}
-    	});*/
+   	
 
 			});
 			$scope.shoes =[];
@@ -81,8 +66,64 @@
 			};
 			
 		})
-		.controller('AuthController', function($scope, $location, Auth, user) {
-		/*	if (user){
+	/*	.controller('UploadController', function($rootScope, $scope, $routeParams) {
+			var vm = this,
+					id = $routeParams.id;
+
+			vm.imageUrl = 'https://sneakerbox-images.s3.amazonaws.com/' + $rootScope.user.uid + '/' + id + '.jpg';
+		.controller('ChangePasswordController', function($scope, $location, authFactory)
+				var vm = this;
+				vm.changePassword = function(){
+					authFactory.changePassword(vm.oldPassword, vm.newPassword, function(){
+						$location.path('/logout');
+						$scope.$apply();
+					})
+				};
+			})*/
+		.controller('LoginController', function(){
+			var vm = this;
+
+			vm.login =function(){
+				var ref = new Firebase('https://sneakerbox.firebaseio.com')
+					ref.authWithPassword({
+						email			: vm.email,
+						password	: vm.password
+					}, function(error, authData) {
+						if (error === null) {
+							console.log("user logged in", authData);
+						} else {
+							console.log("error creating user:", error);
+						}
+					});
+			}
+		})
+
+		/*	vm.login = function() {
+				authFactory.login(vm.email, vm.password, function(){
+					$location.path('/collection');
+					$scope.$apply();
+				});
+			};
+
+			vm.register = function(){
+				authFactory.register(vm.email, vm.password, function(){
+					vm.login();
+				});
+			};
+
+			vm.forgotPasswork = function(){
+				authFactory.resetPassword(vm.email);
+			};
+		})
+		.controller('LogoutController', function($scope, $location, authFactory){
+			authFactory.logout(function(){
+				$location.path('/login');
+				$scope.$apply();
+			});
+		})
+
+		/*.controller('AuthController', function($scope, $location, Auth, user) {
+			if (user){
 				$location.path('/');
 			}
 			$scope.register = function () {
@@ -91,6 +132,6 @@
 						$location.path('/');
 					});
 				});
-			};*/
-		});
+			};
+		});*/
 	}());

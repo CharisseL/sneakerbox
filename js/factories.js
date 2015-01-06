@@ -66,38 +66,98 @@
 				getAllShoes: getAllShoes,
 			};
 		})
-		.factory('Auth', function ($firebaseSimpleLogin, FIREBASE_URL, $rootScope) {
-			var ref = new Firebase(FIREBASE_URL);
-			var auth = $firebaseSimpleLogin(ref);
+	/*	.factory('authFactory', function ($firebaseSimpleLogin, FIREBASE_URL, $rootScope) {
+			var factory = {},
+					ref = new Firebase(FIREBASE_URL);
 
-			var Auth = {
-				register: function (user) {
-					return auth.$createUser(user.email, user.password);
-				},
-				login: function (user) {
-					return auth.$login('password', user);
-				},
-				logout: function () {
-					auth.$logout();
-				},
-				resolveUser: function() {
-					return auth.$getCurrentUser();
-				},
-				signedIn: function() {
-					return !!Auth.user.provider;
-				},
-				user: {}
+			$rootScope.user = ref.getAuth();
+
+			factory.requireLogin = function () {
+				if (!_isLoggedIn()) {
+					$location.path('/login');
+				} else if (_hasTemporaryPassword()) {
+					$location.path('/changepassword');
+				}
 			};
 
-			$rootScope.$on('$firebaseSimpleLogin:login', function(e, user) {
-				console.log('logged in');
-				angular.copy(user, Auth.user);
-			});
-			$rootScope.$on('$firebaseSimpleLogin:logout', function() {
-				console.log('logged out');
-				angular.copy({}, Auth.user);
-			});
+			factory.disallowLogin = function(){
+				if(_isLoggedIn()) {
+					$location.path('/collection');
+				}
+			};
 
-			return Auth;
-		});
-	}());
+			function _isLoggedIn(){
+				return ref.getAuth().password.isTemporaryPassword;
+			}
+
+			factory.changePassword = function(oldPass, newPass, cb){
+				ref.changePassword({
+					email				: ref.getAuth().password.email,
+					oldPassword	: oldPass,
+					newPassword	: newPass,
+				}, function(error) {
+					if (error === null) {
+						console.log('Password changed');
+						cb();
+					} else {
+						console.log('Error changing password:', error);
+					}
+				}
+			);
+		};
+
+		factory.login = function(email, pass, cb){
+			ref.authWithPassword({
+				email			: email,
+				password	: pass
+			}, function(error, authData) {
+				if(error === null) {
+					console.log('User logged in', authData);
+					$rootScope.user = authData;
+					ref.child('users').child(authData.uid).child('authData').set(authData);
+					cb();
+				} else {
+					console.log('Error logging in:' error);
+					}
+				}
+			);
+		};
+
+		factory.logout = function(cb){
+			ref.unauth(function(){
+				$rootScope.user = null;
+				cb();
+			});
+		};
+
+		factory.register = function(email, pass, cb){
+			ref.createUser({
+				email			:	email,
+				password	: pass
+			}, function(error, authData) {
+				if (error === null) {
+					console.log('User created', authData);
+					cb();
+				} else {
+					console.log('Error creating user:', error);
+					}
+				}
+			);
+		};
+
+		factory.resetPassword = function(email){
+			ref.resetPassword({
+				email : email
+			}, function(error) {
+				if (error === null){
+					console.log('password reset email sent');
+				} else {
+					console.log('error sending password reset email:', error);
+					}
+				}
+			);
+		};
+
+		return factory;
+		})*/
+}());

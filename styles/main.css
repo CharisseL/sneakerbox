@@ -27,6 +27,9 @@ h2, h3{
 
 }
 
+.login {
+	margin-left: 800px;
+}
 a:link{
 	text-decoration: none;
 }
@@ -67,6 +70,12 @@ td {
 .form-group{
 	margin-left: 25px;
 }
+
+.form-control{
+	color: black;
+}
+
+
 
 .btn-primary {	
 	margin-left: 25px;

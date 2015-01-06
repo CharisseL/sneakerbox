@@ -8,7 +8,8 @@ var app = angular
 			'ngResource',
 			'ngRoute',
 			'ngSanitize',
-			'ngTouch'
+			'ngTouch',
+			'angularFileUpload'
 	])
 	app.controller('PostsCtrl', function ($scope) {
 	});
