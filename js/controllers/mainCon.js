@@ -80,17 +80,21 @@
 					})
 				};
 			})*/
-		.controller('LoginController', function(){
+		.controller('LoginController', function($scope, $location){
 			var vm = this;
+			var ref = new Firebase('https://sneakerbox.firebaseio.com');
 
-			vm.login =function(){
-				var ref = new Firebase('https://sneakerbox.firebaseio.com')
-					ref.authWithPassword({
+			vm.login = function(){
+						console.log('HELP');
+						ref.authWithPassword({
 						email			: vm.email,
 						password	: vm.password
-					}, function(error, authData) {
+					},
+					function(error, authData) {
 						if (error === null) {
 							console.log("user logged in", authData);
+							$location.path('/');
+							$scope.$apply();
 						} else {
 							console.log("error creating user:", error);
 						}

@@ -3,14 +3,7 @@
 
 	angular.module('snkrApp', [
 			'ngRoute',
-		 	'mgcrea.ngStrap',
-			'ngAnimate',
-			'ngCookies',
-			'ngResource',
-			'ngRoute',
-			'ngSanitize',
-			'ngTouch',
-			'firebase'
+		 	'mgcrea.ngStrap'
 	])
 		.config(function($routeProvider){
 			$routeProvider
