@@ -56,9 +56,19 @@ td {
 	margin-left: 650px;
 }
 
+#lean_overlay {
+    position: fixed;
+    z-index:100;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+}
 .showKicks {
-	max-width: 200px;
-	max-height: 200px;
+	max-width: 120px;
+	max-height: 120px;
 }
 
 .show-page-image {
@@ -90,16 +100,12 @@ td {
 	width: 450px;
 }
 
-#snkrBox img {
-    height: 100px;
-    width: 100px;
-    margin: 2px;
-}
+
 
 #snkrBox {
 		margin-left: 20px;
     padding: 5px;
-		border: 2px solid slategrey;
-    max-height: 200px;
+		border: 1.5px solid slategrey;
+    max-height: 150px;
     width: 900px;
 }

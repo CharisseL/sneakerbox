@@ -3,7 +3,8 @@
 
 	angular.module('snkrApp', [
 			'ngRoute',
-		 	'mgcrea.ngStrap'
+		 	'mgcrea.ngStrap',
+			'ngDragDrop'
 	])
 		.config(function($routeProvider){
 			$routeProvider

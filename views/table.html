@@ -14,9 +14,9 @@
 	</thead>
 	<tbody id="shoelist">
 		<tr ng-repeat="(shoeId, shoe) in shoeCtrl.shoes">
-			<td><img class="showKicks image" ng-src="{{shoe.image}}"></td>
+			<td><span data-drag="true" jqyoui-draggable><img class="showKicks image" ng-src="{{shoe.image}}"></span></td>
 			<td>{{shoe.brand}}</td>
-			<td>{{shoe.name}}</td>
+			<td><span data-drag="true" jqyoui-draggable>{{shoe.name}}</span></td>
 			<td>{{shoe.sport}}</td>
 			<td>{{shoe.colorway}}</td>
 			<td><span class="currency-default">{{shoe.price | currency}}</span></td>
