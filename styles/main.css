@@ -106,6 +106,6 @@ td {
 		margin-left: 20px;
     padding: 5px;
 		border: 1.5px solid slategrey;
-    max-height: 150px;
+    height: 100px;
     width: 900px;
 }
