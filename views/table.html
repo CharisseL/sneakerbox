@@ -2,9 +2,9 @@
 	<h3>This Week's Top 5</h3>
 </div>
 <script type="text/javascript"> 
-	$('div.drag').draggable({ containment: '#snkrBox', revert: "invalid" });
-
-  $('div.drop').droppable( {
+	$("#snkrBox").hide().show(1250);	
+	$('#showKicks').draggable({ containment: '#snkrBox', revert: "invalid" });
+  $('#showKicks').droppable( {
     drop: handleDropEvent
   } );
 
@@ -26,7 +26,7 @@ function handleDropEvent( event, ui ) {
 	</thead>
 	<tbody id="shoelist">
 		<tr ng-repeat="(shoeId, shoe) in shoeCtrl.shoes">
-			<td><span data-drag="true" jqyoui-draggable containment="parent"><img class="showKicks image" ng-src="{{shoe.image}}"></span></td>
+			<td><span data-drag="true" jqyoui-draggable ><img class="showKicks" ng-src="{{shoe.image}}"></span></td>
 			<td>{{shoe.brand}}</td>
 			<td><span data-drag="true" jqyoui-draggable>{{shoe.name}}</span></td>
 			<td>{{shoe.sport}}</td>
