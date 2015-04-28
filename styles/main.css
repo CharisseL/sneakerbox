@@ -28,7 +28,7 @@ h2, h3{
 }
 
 .login {
-	margin-left: 800px;
+	margin-left: 10px;
 }
 a:link{
 	text-decoration: none;
@@ -100,7 +100,7 @@ td {
 #snkrBox {
 		margin-left: 20px;
 		border: 2.5px solid lightgray;
-    height: 100px;
+    height: 110px;
     width: 1025px;
 		margin: 20px;
 }
@@ -113,12 +113,17 @@ td {
 	float: left;
 	height: 95px;
 	border: 1px solid lightgray;
-	margin-top: -65px;
+	margin-top: -94px;
 	margin-left: 170px;
 }
 
 #snkrBox >h3 {
 	padding: 5px;
+}
+
+#snkrBox >h6{
+	padding: 5px;
+	color: slategray;
 }
 
 
