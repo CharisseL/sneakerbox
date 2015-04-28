@@ -105,7 +105,12 @@ td {
 #snkrBox {
 		margin-left: 20px;
     padding: 5px;
-		border: 1.5px solid slategrey;
+		border: 2.5px solid white;
     height: 100px;
-    width: 900px;
+    width: 1000px;
+		margin: 20px;
+}
+
+#snkrBox:hover {
+	border-color: slategray;
 }

@@ -6,19 +6,15 @@
 	<button ng-click="deletePost(post)">Delete</button>
 </div>	
 <div class="snkrNews">
-<h3>Sneaker News & Release Dates</h3>
+	<h3>Sneaker News & Release Dates</h3>
 
-<form ng-submit="submitPost()">
-  <input type="text" ng-model="post.title" placeholder= "Post Title"/>
-  <input type="text" ng-model="post.url" />
-  <input type="submit" value="Add Post" />
-</form>
+	<form ng-submit="submitPost()">
+ 		<input type="text" ng-model="post.title" placeholder= "Post Title"/>
+  	<input type="text" ng-model="post.url" />
+  	<input type="submit" value="Add Post" />
+	</form>
 	<div ng-repeat="(postId, post) in posts"> 
 </div>
-</div>
-</br>
-<div class="snkrWeek">
-	<h3>Shoes this Week</h3>
 </div>
 <div class="snkrTweets">
 	<a class="twitter-timeline" href="https://twitter.com/SoleCollector" data-widget-id="551095524682903554">Tweets by @SoleCollector</a>

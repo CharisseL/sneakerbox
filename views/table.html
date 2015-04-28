@@ -3,10 +3,10 @@
 </div>
 <script type="text/javascript"> 
 	$("#snkrBox").hide().show(1250);	
-	$('#showKicks').draggable({ containment: '#snkrBox', revert: "invalid" });
-  $('#showKicks').droppable( {
-    drop: handleDropEvent
-  } );
+
+	$('div.drop').droppable( {
+		drop: handleDropEvent
+	});
 
 function handleDropEvent( event, ui ) {
   var draggable = ui.draggable;
@@ -20,7 +20,6 @@ function handleDropEvent( event, ui ) {
 			<th>Brand</th>
 			<th>Shoe Name</th>
 			<th>Sport</th>
-			<th>Colorway</th>
 			<th>Price</th>
 			<th>Date Acquired</th>
 	</thead>
@@ -28,9 +27,8 @@ function handleDropEvent( event, ui ) {
 		<tr ng-repeat="(shoeId, shoe) in shoeCtrl.shoes">
 			<td><span data-drag="true" jqyoui-draggable ><img class="showKicks" ng-src="{{shoe.image}}"></span></td>
 			<td>{{shoe.brand}}</td>
-			<td><span data-drag="true" jqyoui-draggable>{{shoe.name}}</span></td>
+			<td>{{shoe.name}}</td>
 			<td>{{shoe.sport}}</td>
-			<td>{{shoe.colorway}}</td>
 			<td><span class="currency-default">{{shoe.price | currency}}</span></td>
 			<td>{{shoe.acquired}}</td>
 			<td>
