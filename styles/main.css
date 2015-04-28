@@ -74,7 +74,6 @@ td {
 .show-page-image {
 	max-width: 300px;
 	max-height: 300px;
-
 }
 
 .form-group{
@@ -84,8 +83,6 @@ td {
 .form-control{
 	color: black;
 }
-
-
 
 .btn-primary {	
 	margin-left: 25px;
@@ -100,17 +97,28 @@ td {
 	width: 450px;
 }
 
-
-
 #snkrBox {
 		margin-left: 20px;
-    padding: 5px;
-		border: 2.5px solid white;
+		border: 2.5px solid lightgray;
     height: 100px;
-    width: 1000px;
+    width: 1025px;
 		margin: 20px;
 }
 
 #snkrBox:hover {
 	border-color: slategray;
 }
+
+.top1, .top2, .top3, .top4, .top5{
+	float: left;
+	height: 95px;
+	border: 1px solid lightgray;
+	margin-top: -65px;
+	margin-left: 170px;
+}
+
+#snkrBox >h3 {
+	padding: 5px;
+}
+
+
